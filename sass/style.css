@@ -1,0 +1,672 @@
+@font-face {
+  font-family: "Shrikhand";
+  src: url("Shrikhand/Shrikhand-Regular.otf");
+}
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes loading {
+  0% {
+    transform: perspective(250px) rotateX(0deg) rotateY(0deg);
+  }
+  15% {
+    background-color: #9356dc;
+  }
+  16% {
+    background-color: #ff79da;
+  }
+  50% {
+    transform: perspective(250px) rotateX(180deg) rotateY(0deg);
+    background-color: #ff79da;
+  }
+  65% {
+    background-color: #ff79da;
+  }
+  66% {
+    background-color: #9356dc;
+  }
+  100% {
+    transform: perspective(250px) rotateX(180deg) rotateY(-180deg);
+  }
+}
+@keyframes loading-icon {
+  0% {
+    transform: perspective(250px) rotateX(0deg) rotateY(0deg);
+  }
+  15% {
+    transform: perspective(250px) rotateX(0deg) rotateY(0deg);
+  }
+  16% {
+    transform: perspective(250px) rotateX(180deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(250px) rotateX(180deg) rotateY(0deg);
+  }
+  65% {
+    transform: perspective(250px) rotateX(180deg) rotateY(0deg);
+  }
+  66% {
+    transform: perspective(250px) rotateX(180deg) rotateY(180deg);
+  }
+  100% {
+    transform: perspective(250px) rotateX(180deg) rotateY(180deg);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.8, 1.1) translateY(-100px);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-7px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+h1 {
+  font-family: "Shrikhand", "Roboto", sans-serif;
+}
+
+body,
+html {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: white;
+  animation: loader 0.2s forwards;
+  animation-timing-function: linear;
+  animation-delay: 3s;
+  animation-fill-mode: both;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader__symbol {
+  background-color: #9356dc;
+  padding: 0.75rem 1.5rem;
+  animation: loading 3s;
+  border-radius: 100px;
+}
+.loader__symbol img {
+  display: block;
+  max-width: 100%;
+  animation: loading-icon 3s;
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+  position: relative;
+}
+
+.header {
+  padding: 1rem;
+  position: relative;
+}
+.header__logo {
+  font-family: "Shrikhand", "cursive";
+  margin: 0;
+  text-align: center;
+}
+
+.footer {
+  background-color: black;
+}
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.footer__logo {
+  color: white;
+  font-family: "Shrikhand", "cursive";
+  margin: 0;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.footer__tab {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer__tabInfo {
+  margin: 0.5rem 0;
+}
+.footer__link {
+  color: white;
+  text-decoration: none;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__icon {
+  width: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+@font-face {
+  font-family: "Shrikhand";
+  src: url("Shrikhand/Shrikhand-Regular.otf");
+}
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes loading {
+  0% {
+    transform: perspective(250px) rotateX(0deg) rotateY(0deg);
+  }
+  15% {
+    background-color: #9356dc;
+  }
+  16% {
+    background-color: #ff79da;
+  }
+  50% {
+    transform: perspective(250px) rotateX(180deg) rotateY(0deg);
+    background-color: #ff79da;
+  }
+  65% {
+    background-color: #ff79da;
+  }
+  66% {
+    background-color: #9356dc;
+  }
+  100% {
+    transform: perspective(250px) rotateX(180deg) rotateY(-180deg);
+  }
+}
+@keyframes loading-icon {
+  0% {
+    transform: perspective(250px) rotateX(0deg) rotateY(0deg);
+  }
+  15% {
+    transform: perspective(250px) rotateX(0deg) rotateY(0deg);
+  }
+  16% {
+    transform: perspective(250px) rotateX(180deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(250px) rotateX(180deg) rotateY(0deg);
+  }
+  65% {
+    transform: perspective(250px) rotateX(180deg) rotateY(0deg);
+  }
+  66% {
+    transform: perspective(250px) rotateX(180deg) rotateY(180deg);
+  }
+  100% {
+    transform: perspective(250px) rotateX(180deg) rotateY(180deg);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.8, 1.1) translateY(-100px);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-7px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+.loc {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background: #ececec;
+  box-shadow: inset 0px 2px 10px 0px #bcbcbc;
+}
+.loc__icon {
+  margin-right: 1rem;
+}
+
+.pres {
+  padding: 3rem;
+  text-align: center;
+  background: #f3f3f3;
+}
+.pres__title {
+  margin: 0;
+}
+.pres__subtitle {
+  font-weight: 300;
+  margin: 1.5rem 0;
+}
+.pres__btn {
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  color: white;
+  background-color: #686868;
+  background-image: linear-gradient(to top, #9356dc, #ff79da);
+  cursor: pointer;
+  transition-duration: 0.25s;
+  box-shadow: 0.25rem 0.25rem 10px #f3f3f3;
+}
+.pres__btn:hover {
+  background-color: white;
+  box-shadow: 0.25rem 0.25rem 10px black;
+}
+.pres__btn a {
+  text-decoration: none;
+  color: inherit;
+}
+.pres__btn:hover {
+  box-shadow: 4px 4px 6px grey;
+}
+
+.tuto {
+  display: block;
+  margin: 1rem;
+}
+.tuto__steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: compteListe;
+}
+@media (min-width: 64rem) {
+  .tuto__steps {
+    display: flex;
+    align-content: flex-start;
+    justify-content: space-between;
+  }
+}
+.tuto__step {
+  padding: 1.5rem;
+  margin: 1rem 0 1rem 0.75rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+  border-radius: 1.25rem;
+  background-color: #f6f6f6;
+  display: flex;
+  position: relative;
+}
+.tuto__step::before {
+  counter-increment: compteListe 1;
+  content: counter(compteListe) " ";
+  background: #9356dc;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  left: -0.75rem;
+}
+.tuto__icon {
+  margin-right: 1rem;
+  color: grey;
+}
+
+.restaurants {
+  background: #f3f3f3;
+  padding: 1rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 1rem;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.card__img {
+  height: 12rem;
+  width: 100%;
+  border: transparent solid 0px;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: none;
+  object-fit: cover;
+}
+.card__badge {
+  background-color: #99e2d0;
+  color: #1b6150;
+  padding: 0.5rem;
+  border-radius: 0.125rem;
+  position: absolute;
+  bottom: 45%;
+  right: 0.75rem;
+  animation: bounce 2s infinite;
+}
+.card__footer {
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.card__content {
+  flex: 1;
+}
+.card__btn {
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: transparent 0px solid;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card__heart {
+  background-color: white !important;
+}
+
+.header--withBackArrow {
+  position: relative;
+}
+.header__arrow {
+  position: absolute;
+  left: 2rem;
+  height: 2rem;
+  width: 2rem;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: black;
+}
+
+.presImg {
+  max-width: 100%;
+  max-height: 32rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.menu {
+  margin-top: -4rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #f3f3f3;
+  position: relative;
+}
+.menu__header {
+  padding: 1rem 2rem 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu__title {
+  font-family: "Shrikhand", "cursive";
+  padding-top: 2rem;
+}
+.menu__btn {
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: transparent 0px solid;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  background-color: black;
+}
+.menu__btn:hover::before {
+  opacity: 1;
+}
+.menu__btn::before {
+  opacity: 0;
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top, #9356dc, #ff79da);
+}
+.menu__heart {
+  transition-duration: 0.25s;
+  background-color: #f3f3f3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: lighten;
+}
+.menu__btn:hover .menu__heart--nolike {
+  opacity: 0;
+}
+
+.pagemenu {
+  display: grid;
+}
+@media (min-width: 64rem) {
+  .pagemenu {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+  }
+}
+
+.dish {
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0 1rem;
+}
+.dish__title {
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 0.5rem;
+  font-weight: normal;
+}
+.dish__title::after {
+  content: "";
+  width: 3rem;
+  height: 0.25rem;
+  background-color: #99e2d0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.menuItem {
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  border-radius: 0.75rem;
+  margin: 1rem;
+  box-shadow: 0.1rem 0.1rem 0.5rem #ececec;
+  overflow: hidden;
+  animation: fadeIn 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  max-width: 100%;
+}
+.menuItem__header {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex: 1;
+}
+.menuItem__title {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menuItem__description {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menuItem__price {
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-left: 0.5rem;
+}
+.menuItem__confirmation {
+  background-color: #99e2d0;
+  margin: -1rem -5rem -1rem 1rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+}
+.menuItem:hover .menuItem__confirmation {
+  margin-right: -1rem;
+}
+.menuItem__wrapIcon {
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  transform: rotate(360deg);
+  transition-duration: 0.5s;
+}
+.menuItem:hover .menuItem__wrapIcon {
+  transform: rotate(0);
+}
+.menuItem__icon {
+  color: #99e2d0;
+}
+
+.delay-0 {
+  animation-delay: 0s;
+}
+
+.delay-1 {
+  animation-delay: 0.5s;
+}
+
+.delay-2 {
+  animation-delay: 1s;
+}
+
+.delay-3 {
+  animation-delay: 1.5s;
+}
+
+.delay-4 {
+  animation-delay: 2s;
+}
+
+.delay-5 {
+  animation-delay: 2.5s;
+}
+
+.delay-6 {
+  animation-delay: 3s;
+}
+
+.delay-7 {
+  animation-delay: 3.5s;
+}
+
+.delay-8 {
+  animation-delay: 4s;
+}
+
+.wrapBtn {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.orderBtn {
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  color: white;
+  background-color: #686868;
+  background-image: linear-gradient(to top, #9356dc, #ff79da);
+  cursor: pointer;
+  transition-duration: 0.25s;
+  box-shadow: 0.25rem 0.25rem 10px #f3f3f3;
+  cursor: pointer;
+}
+.orderBtn:hover {
+  background-color: white;
+  box-shadow: 0.25rem 0.25rem 10px black;
+}
+.orderBtn a {
+  text-decoration: none;
+  color: inherit;
+}
+.orderBtn:hover {
+  box-shadow: 4px 4px 6px grey;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,99 @@
+
+h1 {
+  font-family: "Shrikhand", "Roboto", sans-serif;
+}
+
+body,
+html {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: white;
+  animation: loader 0.2s forwards;
+  animation-timing-function: linear;
+  animation-delay: 3s;
+  animation-fill-mode: both;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__symbol {
+    background-color: $color-primary;
+    padding: 0.75rem 1.5rem;
+    animation: loading $animationDuration;
+    border-radius: 100px;
+
+    img {
+      display: block;
+      max-width: 100%;
+      animation: loading-icon $animationDuration;
+    }
+  }
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+  position: relative;
+}
+
+.header {
+  padding: 1rem;
+  position: relative;
+
+  &__logo {
+    font-family: "Shrikhand", "cursive";
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.footer {
+  background-color: black;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  &__logo {
+    color: white;
+    font-family: "Shrikhand", "cursive";
+    margin: 0;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__tab {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__tabInfo {
+    margin: 0.5rem 0;
+  }
+
+  &__link {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__icon {
+    width: 1.2rem;
+    margin-right: 0.5rem;
+  }
+}
