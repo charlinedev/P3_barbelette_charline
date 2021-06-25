@@ -13,6 +13,13 @@
   &__icon {
     margin-right: 1rem;
   }
+
+  &__text input {
+  border: none;
+  background: $color-quinary;
+  font-size:medium;
+  }
+
 }
 
 .pres {
@@ -53,6 +60,11 @@
     }
   }
 
+  &__icon {
+    margin-right: 1rem;
+    color: grey;
+}
+
   &__step {
     padding: 1.5rem;
     margin: 1rem 0 1rem 0.75rem;
@@ -61,7 +73,7 @@
     background-color: #f6f6f6;
     display: flex;
     position: relative;
-
+    
     &::before {
       counter-increment: compteListe 1;
       content: counter(compteListe) " ";
@@ -76,12 +88,14 @@
       position: absolute;
       left: -0.75rem;
     }
-  }
-
-  &__icon {
-    margin-right: 1rem;
-    color: grey;
-  }
+    &:hover {
+      background: #f2eafb;
+    .fas {
+      color: $color-primary;
+    }
+          }
+    
+  }  
 }
 .restaurants {
   background: $color-quaternary;
