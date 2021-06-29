@@ -274,6 +274,11 @@ html {
 .loc__icon {
   margin-right: 1rem;
 }
+.loc__text input {
+  border: none;
+  background: #ececec;
+  font-size: medium;
+}
 
 .pres {
   padding: 3rem;
@@ -289,9 +294,9 @@ html {
 }
 .pres__btn {
   border: 0;
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1rem;
   border-radius: 100px;
   color: white;
   background-color: #686868;
@@ -329,6 +334,10 @@ html {
     justify-content: space-between;
   }
 }
+.tuto__icon {
+  margin-right: 1rem;
+  color: grey;
+}
 .tuto__step {
   padding: 1.5rem;
   margin: 1rem 0 1rem 0.75rem;
@@ -352,9 +361,11 @@ html {
   position: absolute;
   left: -0.75rem;
 }
-.tuto__icon {
-  margin-right: 1rem;
-  color: grey;
+.tuto__step:hover {
+  background: #f2eafb;
+}
+.tuto__step:hover .fas {
+  color: #9356dc;
 }
 
 .restaurants {
@@ -645,9 +656,9 @@ html {
 
 .orderBtn {
   border: 0;
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1rem;
   border-radius: 100px;
   color: white;
   background-color: #686868;
